@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Written by Sangam Sharma %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[a4paper]{geometry} %defining geometry of the page
+\usepackage[utf8]{inputenc}
+\def\DevnagVersion{2.17} 
+\usepackage{devanagari} %for devenagari typing
+\setlength{\parindent}{0pt} %to have zero paragrapht indentation
+\usepackage{amsfonts,amsmath,amssymb} %AMS packages for sysmbols, fonts, etc.
+\usepackage{anyfontsize} %able to chose any integer value as font size
+\newgeometry{
+	top=2.5cm, %top margin space
+	bottom=2.5cm, %bottom margin space
+	right=2.5cm, %right margin space
+	left=3.5cm %left margin space
+}
+
+\usepackage{hyperref} %for linking the references of figure, table, etc.
+\hypersetup{hidelinks} %for hiding the references red square
+\usepackage{cite} %for citation
+\usepackage{natbib}
+\usepackage{acronym} %for acronym
+\usepackage{tocloft} %for customizing toc, lot and lof
+\usepackage{xcolor} %for using color
+\usepackage[bf]{caption} %making caption boldface
+
+%changing the fontsize to 10 pt in captions of tables, figures
+\makeatletter
+  \l@addto@macro\captionfont{\fontfamily{ptm}\fontsize{10}{15}\selectfont}
+\makeatother 
+
+\usepackage{graphicx} %to load images
+\usepackage{float}
+\graphicspath{{images/}} %all the graphics are sourced from images/ folder
+%if extra for graphics folder required uncomment below line and replace
+%...nam.../ with the path to that folder
+%\graphicspath{{...nam.../}}
+
+\usepackage{enumerate} %for creating lists
+\usepackage{array, multirow, booktabs} %for customizing tables
+
+%changing the font of caption in tables to times roman
+\makeatletter
+\renewenvironment{table}
+  {\renewcommand\familydefault\sfdefault
+   \@float{table}}
+  {\end@float}
+\makeatother
+
+%changing the font of caption in figure to times roman
+\makeatletter
+\renewenvironment{figure}
+  {\renewcommand\familydefault\sfdefault
+   \@float{figure}}
+  {\end@float}
+\makeatother
+\renewcommand{\sfdefault}{ptm}
+
+%to print current month in alphabet
+\newcommand{\lowermonth}{
+  \ifcase\the\month
+  \or\kern-1mm January\kern 0mm
+  \or\kern-1mm February\kern 0mm
+  \or\kern-1mm March\kern 0mm
+  \or\kern-1mm April\kern 0mm
+  \or\kern-1mm May\kern 0mm
+  \or\kern-1mm June\kern 0mm
+  \or\kern-1mm July\kern 0mm
+  \or\kern-1mm August\kern 0mm
+  \or\kern-1mm September\kern 0mm
+  \or\kern-1mm October\kern 0mm
+  \or\kern-1mm November\kern 0mm
+  \or\kern-1mm December\kern 0mm
+  \fi
+ }
+
+%to print current month in uppercase
+\newcommand{\uppermonth}{\MakeUppercase\lowermonth}
+
+%changing the command \textsubscript{} to \tsb
+\newcommand{\tsb}[1]{\textsubscript{#1}}
+%changing the command \textsuperscript{} to \tsp
+\newcommand{\tsp}[1]{\textsuperscript{#1}}
+
+%below are also list of macros created to reduce the size of commands
+
+%changing font size
+\newcommand{\fonta}[1]{\fontfamily{ptm}\fontsize{#1}{18}\selectfont}
+%adding entry to the table of content
+\newcommand{\toca}[3]{\addcontentsline{toc}{#1}{#2 #3}}
+%adding entry to the table of content as well creating the heading
+\newcommand{\tocb}[3]{\textbf{\fonta{#2} #3} \toca{#1}{\fonta{#2}}{#3}}
+%changing font size with a vertical space
+\newcommand{\fontb}{\vspace{-2.5cm} \centering\fonta{16}}
+%changing font size with a vertical space filled in right side
+\newcommand{\fontc}[1]{\vspace{1cm}\fonta{14}{#1} \hfill\vspace{-1.4cm}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
