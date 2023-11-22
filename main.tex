@@ -1,57 +1,21 @@
 \documentclass[12pt]{report}
 \usepackage{style} %loading the preambles written in style.sty file
-
-%replace below ...nam... with your name
-\def\myname{...nam...}
-%replace below ...nam... with your supervisor's name
-\def\sup{...nam...}
-%replace below ...nam... with your co-supervisor's name, if not then leave it
-%empty like { }
-\def\cosup{...nam...}
-%replace below ...sub... with your subject's name
-\def\sub{...sub...}
-\def\tu{Tribhuvan University}
-\def\iost{Institute of Science and Technology}
-%replace below ...clz... with your college name
-\def\clz{...clz...}
-%replace below ...sub... with your subject's name
-\def\depart{Department of ...sub...}
-%replace below ...num... with your symbol number
-\def\sym{...num...}
-%replace below ...num... with your registration number
-\def\reg{...num...}
-\def\bsc{Bachelor of Science}
-%replace below ...title... with the title of your project
-\def\title{...title...} 
+\input{commands}
+\input{names}
 
 \begin{document}
 
-{\fonta{12} 
+	\input{coverpage}
 
-\input{coverpage}
-\clearpage
+	%\input{example} %example file
 
-%below file named example is just for example purpose, comment the below line
-\input{example}
-%above file named example is just for example purpose, comment the above line
-\clearpage
+	\input{a.projectIdentification}
 
-\input{a.projectidentification}
-\clearpage
+	\input{b.technicalInformation}
 
-\input{b.technicalinformation}
-\clearpage
+	\printbibliography[title=\hfill Reference \hfill]
 
-% making title name REFERENCE
-\renewcommand{\bibname}{\vspace{-2.5cm} \centering\fonta{16} REFERENCE}
-
-\bibliographystyle{apalike}% using APA style for citation
-\bibliography{reference}
-\clearpage
-
-\input{appendix}
-
-}
+	\input{appendix}
 
 \end{document}
 

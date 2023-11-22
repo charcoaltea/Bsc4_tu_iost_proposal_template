@@ -1,0 +1,27 @@
+%to print current month in alphabet
+\newcommand{\lowermonth}{
+  \ifcase\the\month
+  \or\kern-1mm January\kern 0mm
+  \or\kern-1mm February\kern 0mm
+  \or\kern-1mm March\kern 0mm
+  \or\kern-1mm April\kern 0mm
+  \or\kern-1mm May\kern 0mm
+  \or\kern-1mm June\kern 0mm
+  \or\kern-1mm July\kern 0mm
+  \or\kern-1mm August\kern 0mm
+  \or\kern-1mm September\kern 0mm
+  \or\kern-1mm October\kern 0mm
+  \or\kern-1mm November\kern 0mm
+  \or\kern-1mm December\kern 0mm
+  \fi
+ }
+
+%to print current month in uppercase
+\newcommand{\uppermonth}{\MakeUppercase\lowermonth}
+
+%changing the command \textsubscript{} to \tsb
+\newcommand{\tsb}[1]{\textsubscript{#1}}
+%changing the command \textsuperscript{} to \tsp
+\newcommand{\tsp}[1]{\textsuperscript{#1}}
+
+
