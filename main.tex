@@ -1,21 +1,21 @@
 \documentclass[12pt]{report}
-\usepackage{style} %loading the preambles written in style.sty file
+\input{packages} %loading the preambles written in style.sty file
 \input{commands}
 \input{names}
 
 \begin{document}
 
-	\input{coverpage}
+	\input{chapters/coverpage}
 
-	%\input{example} %example file
+	%\input{chapters/example} %example file
 
-	\input{a.projectIdentification}
+	\input{chapters/a.projectIdentification}
 
-	\input{b.technicalInformation}
+	\input{chapters/b.technicalInformation}
 
 	\printbibliography[title=\hfill Reference \hfill]
 
-	\input{appendix}
+	\input{chapters/appendix}
 
 \end{document}
 
